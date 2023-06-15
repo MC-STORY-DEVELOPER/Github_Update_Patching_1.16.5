@@ -1,0 +1,144 @@
+---- Minecraft Crash Report ----
+// Don't do that.
+
+Time: 6/12/23 3:17 PM
+Description: Unexpected error
+
+java.lang.NullPointerException: Attempted to parse the OBJ model at: /assets/potatpacc/objmodels/parts/wheel.obj but could not find it.  Check the path and try again.
+	at minecrafttransportsimulator.rendering.ModelParserOBJ.parseModelInternal(ModelParserOBJ.java:33) ~[?:?] {re:classloading}
+	at minecrafttransportsimulator.rendering.AModelParser.parseModel(AModelParser.java:53) ~[?:?] {re:classloading}
+	at minecrafttransportsimulator.rendering.AModelParser.generateRenderables(AModelParser.java:68) ~[?:?] {re:classloading}
+	at minecrafttransportsimulator.entities.components.AEntityD_Definable.renderModel(AEntityD_Definable.java:1149) ~[?:?] {re:classloading}
+	at minecrafttransportsimulator.entities.components.AEntityE_Interactable.renderModel(AEntityE_Interactable.java:563) ~[?:?] {re:classloading}
+	at minecrafttransportsimulator.entities.components.AEntityC_Renderable.render(AEntityC_Renderable.java:96) ~[?:?] {re:classloading}
+	at mcinterface1165.InterfaceRender.doRenderCall(InterfaceRender.java:537) ~[?:?] {re:classloading,re:mixin}
+	at net.minecraft.client.renderer.WorldRenderer.handler$zee000$inject_renderLevelSolid(WorldRenderer.java:3689) ~[?:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:APP:cgm.mixins.json:client.WorldRendererMixin,pl:mixin:APP:tac.mixins.json:client.WorldRendererMixin,pl:mixin:APP:mts.mixins.json:client.WorldRendererMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.WorldRenderer.func_228426_a_(WorldRenderer.java:984) ~[?:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:APP:cgm.mixins.json:client.WorldRendererMixin,pl:mixin:APP:tac.mixins.json:client.WorldRendererMixin,pl:mixin:APP:mts.mixins.json:client.WorldRendererMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.GameRenderer.func_228378_a_(GameRenderer.java:608) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.GameRenderer.func_195458_a(GameRenderer.java:425) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.func_195542_b(Minecraft.java:977) [?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:tac.mixins.json:client.MinecraftStaticMixin,pl:mixin:APP:architectury.mixins.json:MixinMinecraft,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:607) [?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:tac.mixins.json:client.MinecraftStaticMixin,pl:mixin:APP:architectury.mixins.json:MixinMinecraft,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:184) [?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_51] {}
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_51] {}
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_51] {}
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[?:1.8.0_51] {}
+	at net.minecraftforge.fml.loading.FMLClientLaunchProvider.lambda$launchService$0(FMLClientLaunchProvider.java:37) [forge-1.16.5-36.2.39.jar:36.2] {}
+	at net.minecraftforge.fml.loading.FMLClientLaunchProvider$$Lambda$494/356338363.call(Unknown Source) [forge-1.16.5-36.2.39.jar:36.2] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.1.3.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.1.3.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-8.1.3.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.1.3.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.1.3.jar:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at minecrafttransportsimulator.rendering.ModelParserOBJ.parseModelInternal(ModelParserOBJ.java:33) ~[?:?] {re:classloading}
+	at minecrafttransportsimulator.rendering.AModelParser.parseModel(AModelParser.java:53) ~[?:?] {re:classloading}
+	at minecrafttransportsimulator.rendering.AModelParser.generateRenderables(AModelParser.java:68) ~[?:?] {re:classloading}
+	at minecrafttransportsimulator.entities.components.AEntityD_Definable.renderModel(AEntityD_Definable.java:1149) ~[?:?] {re:classloading}
+	at minecrafttransportsimulator.entities.components.AEntityE_Interactable.renderModel(AEntityE_Interactable.java:563) ~[?:?] {re:classloading}
+	at minecrafttransportsimulator.entities.components.AEntityC_Renderable.render(AEntityC_Renderable.java:96) ~[?:?] {re:classloading}
+	at mcinterface1165.InterfaceRender.doRenderCall(InterfaceRender.java:537) ~[?:?] {re:classloading,re:mixin}
+	at net.minecraft.client.renderer.WorldRenderer.handler$zee000$inject_renderLevelSolid(WorldRenderer.java:3689) ~[?:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:APP:cgm.mixins.json:client.WorldRendererMixin,pl:mixin:APP:tac.mixins.json:client.WorldRendererMixin,pl:mixin:APP:mts.mixins.json:client.WorldRendererMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.WorldRenderer.func_228426_a_(WorldRenderer.java:984) ~[?:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:APP:cgm.mixins.json:client.WorldRendererMixin,pl:mixin:APP:tac.mixins.json:client.WorldRendererMixin,pl:mixin:APP:mts.mixins.json:client.WorldRendererMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.GameRenderer.func_228378_a_(GameRenderer.java:608) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
+-- Affected level --
+Details:
+	All players: 1 total; [ClientPlayerEntity['Mashirotan'/299, l='ClientLevel', x=235.13, y=70.00, z=-134.46]]
+	Chunk stats: Client Chunk Cache: 729, 502
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (199,63,-208), Chunk: (at 7,3,0 in 12,-13; contains blocks 192,0,-208 to 207,255,-193), Region: (0,-1; contains chunks 0,-32 to 31,-1, blocks 0,0,-512 to 511,255,-1)
+	Level time: 12452 game time, 12452 day time
+	Server brand: forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.world.ClientWorld.func_72914_a(ClientWorld.java:458) ~[?:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:APP:architectury.mixins.json:MixinClientLevel,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.func_71396_d(Minecraft.java:2031) [?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:tac.mixins.json:client.MinecraftStaticMixin,pl:mixin:APP:architectury.mixins.json:MixinMinecraft,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:628) [?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:tac.mixins.json:client.MinecraftStaticMixin,pl:mixin:APP:architectury.mixins.json:MixinMinecraft,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:184) [?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_51] {}
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_51] {}
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_51] {}
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[?:1.8.0_51] {}
+	at net.minecraftforge.fml.loading.FMLClientLaunchProvider.lambda$launchService$0(FMLClientLaunchProvider.java:37) [forge-1.16.5-36.2.39.jar:36.2] {}
+	at net.minecraftforge.fml.loading.FMLClientLaunchProvider$$Lambda$494/356338363.call(Unknown Source) [forge-1.16.5-36.2.39.jar:36.2] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.1.3.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.1.3.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-8.1.3.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.1.3.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.1.3.jar:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.5
+	Minecraft Version ID: 1.16.5
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_51, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 2598592512 bytes (2478 MB) / 4731174912 bytes (4512 MB) up to 5469372416 bytes (5216 MB)
+	CPUs: 12
+	JVM Flags: 10 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xss1M -XX:+IgnoreUnrecognizedVMOptions -Xmx5191M -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=32M
+	ModLauncher: 8.1.3+8.1.3+main-8.1.x.c94d18ec
+	ModLauncher launch target: fmlclient
+	ModLauncher naming: srg
+	ModLauncher services: 
+		/mixin-0.8.4.jar mixin PLUGINSERVICE 
+		/eventbus-4.0.0.jar eventbus PLUGINSERVICE 
+		/forge-1.16.5-36.2.39.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.2.39.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-3.0.1.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.5-36.2.39.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.2.39.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.4.jar mixin TRANSFORMATIONSERVICE 
+		/forge-1.16.5-36.2.39.jar fml TRANSFORMATIONSERVICE 
+	FML: 36.2
+	Forge: net.minecraftforge:36.2.39
+	FML Language Providers: 
+		javafml@36.2
+		minecraft@1
+	Mod List: 
+		forge-1.16.5-36.2.39-client.jar                   |Minecraft                     |minecraft                     |1.16.5              |DONE      |Manifest: NOSIGNATURE
+		MTS+Official+Pack-1.16.5-V25.jar                  |Immersive Vehicles (MTS/IV) - |mtsofficialpack               |V24                 |DONE      |Manifest: NOSIGNATURE
+		cgm-1.2.6-1.16.5.jar                              |MrCrayfish's Gun Mod          |cgm                           |1.2.6               |DONE      |Manifest: NOSIGNATURE
+		jei-1.16.5-7.7.1.153.jar                          |Just Enough Items             |jei                           |7.7.1.153           |DONE      |Manifest: NOSIGNATURE
+		Horror+Elements+mod+1.16.5_Halloween_update.jar   |Horror elements mod           |horror_elements_mod           |1.0.0               |DONE      |Manifest: NOSIGNATURE
+		stealing_villagers-forge-1.16.5-1.0.0.jar         |Stealing the villagers        |stealing_villagers            |1.0.0               |DONE      |Manifest: NOSIGNATURE
+		libraryferret-forge-1.16.5-4.0.0.jar              |Library ferret                |libraryferret                 |4.0.0               |DONE      |Manifest: NOSIGNATURE
+		hostilevillages-3.5-1.16.5.jar                    |Example Mod                   |hostilevillages               |3.5-1.16.5          |DONE      |Manifest: NOSIGNATURE
+		tac-r-0.3.5.3-1.16.5.jar                          |Timeless and Classics Guns    |tac                           |0.3.5.3             |DONE      |Manifest: NOSIGNATURE
+		curios-forge-1.16.5-4.0.8.1.jar                   |Curios API                    |curios                        |1.16.5-4.0.8.1      |DONE      |Manifest: NOSIGNATURE
+		totaldarkness-1.3-1.16.5.jar                      |Total Darkness                |totaldarkness                 |1.3-1.16.5          |DONE      |Manifest: NOSIGNATURE
+		MorePlayerModels-1.16.5.20220731.jar              |More Player Models            |moreplayermodels              |1.16.5.20220731     |DONE      |Manifest: NOSIGNATURE
+		flashLight-2.0.1.jar                              |Flashlight Mod                |flashlight                    |2.0.1               |DONE      |Manifest: NOSIGNATURE
+		ParCool-1.16.5-3.0.1.0-R.jar                      |ParCool!                      |parcool                       |1.16.5-3.0.1.0-R    |DONE      |Manifest: NOSIGNATURE
+		configured-1.5.4-1.16.5.jar                       |Configured                    |configured                    |1.5.4               |DONE      |Manifest: NOSIGNATURE
+		zombieawareness-1.16.5-1.12.jar                   |Zombie Awareness              |zombieawareness               |1.16.5-1.12         |DONE      |Manifest: NOSIGNATURE
+		obfuscate-0.6.3-1.16.5.jar                        |Obfuscate                     |obfuscate                     |0.6.3               |DONE      |Manifest: NOSIGNATURE
+		vehicle-mod-0.45.2-1.16.3.jar                     |MrCrayfish's Vehicle Mod      |vehicle                       |0.45.2              |DONE      |Manifest: NOSIGNATURE
+		MutantBeasts-1.16.4-1.1.3.jar                     |Mutant Beasts                 |mutantbeasts                  |1.16.4-1.1.3        |DONE      |Manifest: d9:be:bd:b6:9a:e4:14:aa:05:67:fb:84:06:77:a0:c5:10:ec:27:15:1b:d6:c0:88:49:9a:ef:26:77:61:0b:5e
+		CustomNPCs-1.16.5.20220515.jar                    |Custom NPCs                   |customnpcs                    |1.16.5.20220515     |DONE      |Manifest: NOSIGNATURE
+		CoroUtil-1.16.5-1.2.37.jar                        |CoroUtil                      |coroutil                      |1.16.5-1.2.37       |DONE      |Manifest: NOSIGNATURE
+		architectury-1.32.68.jar                          |Architectury                  |architectury                  |1.32.68             |DONE      |Manifest: NOSIGNATURE
+		Immersive+Vehicles-1.16.5-22.10.0.jar             |Immersive Vehicles (formerly M|mts                           |NONE                |DONE      |Manifest: NOSIGNATURE
+		C.M.A_Transport_Pack+_v.2.0-1.16.5_fix.jar        |R.A.G.E                       |blockyragecivil               |V1.3                |DONE      |Manifest: NOSIGNATURE
+		firstaid-1.9.8.jar                                |First Aid                     |firstaid                      |1.9.8               |DONE      |Manifest: NOSIGNATURE
+		forge-1.16.5-36.2.39-universal.jar                |Forge                         |forge                         |36.2.39             |DONE      |Manifest: 22:af:21:d8:19:82:7f:93:94:fe:2b:ac:b7:e4:41:57:68:39:87:b1:a7:5c:c6:44:f9:25:74:21:14:f5:0d:90
+	Crash Report UUID: 95bebd09-c788-40ab-9261-726bba8c37b9
+	Launched Version: 1.16.5-forge-36.2.39
+	Backend library: LWJGL version 3.2.2 build 10
+	Backend API: NVIDIA GeForce RTX 3060 Laptop GPU/PCIe/SSE2 GL version 4.6.0 NVIDIA 531.14, NVIDIA Corporation
+	GL Caps: Using framebuffer using OpenGL 3.0
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'forge'
+	Type: Client (map_client.txt)
+	Graphics mode: fancy
+	Resource Packs: 
+	Current Language: English (US)
+	CPU: 12x AMD Ryzen 5 5600H with Radeon Graphics 

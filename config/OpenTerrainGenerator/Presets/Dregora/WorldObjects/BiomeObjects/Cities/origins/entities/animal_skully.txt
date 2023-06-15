@@ -1,0 +1,1 @@
+{CatType:1,CustomName:Skully,CustomNameVisible:0,Health:50,Attributes:[{Name:"generic.max_health",Base:50},{Name:"generic.knockback_resistance",Base:1f}]}

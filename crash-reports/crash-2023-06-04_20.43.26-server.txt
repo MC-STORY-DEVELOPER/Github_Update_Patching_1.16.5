@@ -1,0 +1,107 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  TransformLoader (DynamicSurroundings-1.12.2-3.6.1.0.jar)
+  weaponlib (mw_2.0-0.4.6.2_mc1.12.2.jar)
+  CreativePatchingLoader (CreativeCore_v1.10.63_mc1.12.2.jar)
+  LoadingPlugin (Bloodmoon-MC1.12.2-1.5.3.jar)
+Contact their authors BEFORE contacting forge
+
+// I let you down. Sorry :(
+
+Time: 6/4/23 8:43 PM
+Description: Exception in server tick loop
+
+java.lang.IllegalArgumentException: ChunkNibbleArrays should be 2048 bytes not: 0
+	at net.minecraft.world.chunk.NibbleArray.<init>(SourceFile:16)
+	at net.minecraft.world.chunk.storage.AnvilChunkLoader.func_75823_a(AnvilChunkLoader.java:450)
+	at net.minecraft.world.chunk.storage.AnvilChunkLoader.checkedReadChunkFromNBT__Async(AnvilChunkLoader.java:129)
+	at net.minecraft.world.chunk.storage.AnvilChunkLoader.loadChunk__Async(AnvilChunkLoader.java:93)
+	at net.minecraftforge.common.chunkio.ChunkIOProvider.run(ChunkIOProvider.java:70)
+	at net.minecraftforge.common.chunkio.ChunkIOExecutor.syncChunkLoad(ChunkIOExecutor.java:92)
+	at net.minecraft.world.gen.ChunkProviderServer.loadChunk(ChunkProviderServer.java:118)
+	at net.minecraft.world.gen.ChunkProviderServer.func_186028_c(ChunkProviderServer.java:89)
+	at net.minecraft.world.gen.ChunkProviderServer.func_186025_d(ChunkProviderServer.java:135)
+	at net.minecraft.server.MinecraftServer.func_71222_d(MinecraftServer.java:344)
+	at net.minecraft.server.integrated.IntegratedServer.func_71247_a(IntegratedServer.java:210)
+	at net.minecraft.server.integrated.IntegratedServer.func_71197_b(IntegratedServer.java:233)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:486)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_51, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 433436600 bytes (413 MB) / 1845493760 bytes (1760 MB) up to 5469372416 bytes (5216 MB)
+	JVM Flags: 7 total; -Xmx5191M -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=32M
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.42 Powered by Forge 14.23.5.2860 Optifine OptiFine_1.12.2_HD_U_G5 32 mods loaded, 32 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State  | ID                 | Version        | Source                                      | Signature                                |
+	|:------ |:------------------ |:-------------- |:------------------------------------------- |:---------------------------------------- |
+	| LCHIJA | minecraft          | 1.12.2         | minecraft.jar                               | None                                     |
+	| LCHIJA | mcp                | 9.42           | minecraft.jar                               | None                                     |
+	| LCHIJA | FML                | 8.0.99.99      | forge-1.12.2-14.23.5.2860.jar               | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| LCHIJA | forge              | 14.23.5.2860   | forge-1.12.2-14.23.5.2860.jar               | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| LCHIJA | creativecoredummy  | 1.0.0          | minecraft.jar                               | None                                     |
+	| LCHIJA | aiimprovements     | 0.0.1.3        | AIImprovements-1.12-0.0.1b3.jar             | None                                     |
+	| LCHIJA | baubles            | 1.5.2          | Baubles-1.12-1.5.2.jar                      | None                                     |
+	| LCHIJA | bloodmoon          | 1.5.3          | Bloodmoon-MC1.12.2-1.5.3.jar                | d72e0dd57935b3e9476212aea0c0df352dd76291 |
+	| LCHIJA | collective         | 3.0            | collective-1.12.2-3.0.jar                   | None                                     |
+	| LCHIJA | extendedrenderer   | v1.0           | coroutil-1.12.1-1.2.37.jar                  | None                                     |
+	| LCHIJA | coroutil           | 1.12.1-1.2.37  | coroutil-1.12.1-1.2.37.jar                  | None                                     |
+	| LCHIJA | configmod          | v1.0           | coroutil-1.12.1-1.2.37.jar                  | None                                     |
+	| LCHIJA | creativecore       | 1.10.0         | CreativeCore_v1.10.63_mc1.12.2.jar          | None                                     |
+	| LCHIJA | thaumcraft         | 6.1.BETA26     | Thaumcraft-1.12.2-6.1.BETA26.jar            | None                                     |
+	| LCHIJA | crimsonrevelations | 0.8            | crimsonrevelations-0.8.jar                  | None                                     |
+	| LCHIJA | crimsonwarfare     | 1.5            | crimsonwarfare-1.5.jar                      | None                                     |
+	| LCHIJA | customnpcs         | 1.12           | CustomNPCs_1.12.2-(05Jul20).jar             | None                                     |
+	| LCHIJA | orelib             | 3.6.0.1        | OreLib-1.12.2-3.6.0.1.jar                   | 7a2128d395ad96ceb9d9030fbd41d035b435753a |
+	| LCHIJA | dsurround          | 3.6.1.0        | DynamicSurroundings-1.12.2-3.6.1.0.jar      | 7a2128d395ad96ceb9d9030fbd41d035b435753a |
+	| LCHIJA | jei                | 4.16.1.302     | jei_1.12.2-4.16.1.302.jar                   | None                                     |
+	| LCHIJA | ebwizardry         | 4.3.7          | ElectroblobsWizardry-4.3.8.jar              | None                                     |
+	| LCHIJA | enhancedvisuals    | 1.3.0          | EnhancedVisuals_v1.4.1_mc1.12.2.jar         | None                                     |
+	| LCHIJA | epicsiegemod       | 13.169         | EpicSiegeMod-13.169.jar                     | None                                     |
+	| LCHIJA | lunatriuscore      | 1.2.0.42       | LunatriusCore-1.12.2-1.2.0.42-universal.jar | None                                     |
+	| LCHIJA | moreplayermodels   | 1.12.2         | MorePlayerModels_1.12.2-(05Dec19).jar       | None                                     |
+	| LCHIJA | mw                 | 0.4.6.2        | mw_2.0-0.4.6.2_mc1.12.2.jar                 | None                                     |
+	| LCHIJA | playerrevive       | 1.0            | PlayerRevive_v1.2.40_mc1.12.2.jar           | None                                     |
+	| LCHIJA | playertracking     | 1.4            | playertracking_1.12.2-1.4.jar               | None                                     |
+	| LCHIJA | schematica         | 1.8.0.169      | Schematica-1.12.2-1.8.0.169-universal.jar   | None                                     |
+	| LCHIJA | shurikenmod        | 1.0.0          | Shuriken-Mod-1.12.2.jar                     | None                                     |
+	| LCHIJA | gvc                | 1.2.5          | VoiceChatReloaded-1.12.2-1.3.0.jar          | None                                     |
+	| LCHIJA | zombieawareness    | 1.12.1-1.11.16 | zombieawareness-1.12.1-1.11.16.jar          | None                                     |
+
+	Loaded coremods (and transformers): 
+TransformLoader (DynamicSurroundings-1.12.2-3.6.1.0.jar)
+  
+weaponlib (mw_2.0-0.4.6.2_mc1.12.2.jar)
+  com.vicmatskiv.weaponlib.core.WeaponlibClassTransformer
+CreativePatchingLoader (CreativeCore_v1.10.63_mc1.12.2.jar)
+  
+LoadingPlugin (Bloodmoon-MC1.12.2-1.5.3.jar)
+  lumien.bloodmoon.asm.ClassTransformer
+	GL info: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	Profiler Position: N/A (disabled)
+	Player Count: 0 / 8; []
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	OptiFine Version: OptiFine_1.12.2_HD_U_G5
+	OptiFine Build: 20210124-142939
+	Render Distance Chunks: 11
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.0 NVIDIA 531.14
+	OpenGlRenderer: NVIDIA GeForce RTX 3060 Laptop GPU/PCIe/SSE2
+	OpenGlVendor: NVIDIA Corporation
+	CpuCount: 12
