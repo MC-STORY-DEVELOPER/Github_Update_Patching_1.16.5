@@ -120,7 +120,7 @@ customization {
 customization {
   orientation = top-left
   restartbackgroundanimations = true
-  buttonaction = joinserver;systemdeveloper.ddns.net:25565%btnaction_splitter_fm%
+  buttonaction = joinserver;systemdeveloper2.ddns.net:25565%btnaction_splitter_fm%
   backgroundhovered = config/fancymenu/Image/operation2.jpg
   label = Start Operation [ Travel Server ]
   loopbackgroundanimations = true
