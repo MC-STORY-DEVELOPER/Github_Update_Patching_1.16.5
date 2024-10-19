@@ -1,2 +1,20 @@
 type = user_variables
 
+variable {
+  name = server_ip
+  value = systemdeveloper.ddns.net:25566
+  reset_on_launch = false
+}
+
+variable {
+  name = ip2
+  value = systemdeveloper.ddns.net:25565
+  reset_on_launch = false
+}
+
+variable {
+  name = ip1
+  value = systemdeveloper.ddns.net:25566
+  reset_on_launch = false
+}
+
