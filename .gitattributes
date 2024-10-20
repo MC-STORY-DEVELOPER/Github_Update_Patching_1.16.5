@@ -1,1 +1,2 @@
-ServerMain1950/mods/49.jar filter=lfs diff=lfs merge=lfs -text
+ServerMain1950/mods/[[:space:]](49).jar filter=lfs diff=lfs merge=lfs -text
+ServerMain1950/mods/(49).jar filter=lfs diff=lfs merge=lfs -text
