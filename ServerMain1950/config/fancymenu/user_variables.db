@@ -2,7 +2,7 @@ type = user_variables
 
 variable {
   name = server_ip
-  value = systemdeveloper.ddns.net:25566
+  value = systemdeveloper2.ddns.net:25566
   reset_on_launch = false
 }
 
